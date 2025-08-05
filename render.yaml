@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: hackrx-api
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: ./start.sh
+    envVars:
+      - key: PINECONE_API_KEY
+        value: your_pinecone_key_here
+      - key: PINECONE_INDEX_NAME
+        value: your_index_name
+      - key: DATABASE_URL
+        value: your_postgres_url
+      - key: GROQ_API_KEY
+        value: your_groq_key
+      - key: AUTH_TOKEN
+        value: the_token_provided_by_organizers

@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pdfplumber
+pinecone-client
+sentence-transformers
+sqlalchemy
+psycopg2-binary
+requests
+python-dotenv
+docx2txt
+beautifulsoup4
