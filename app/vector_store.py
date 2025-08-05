@@ -23,7 +23,8 @@ if PINECONE_INDEX_NAME not in pc.list_indexes().names():
 index = pc.Index(PINECONE_INDEX_NAME)
 
 # Load SentenceTransformer model locally
-model = SentenceTransformer("all-MiniLM-L6-v2")  # 384-dimensional embeddings
+model = SentenceTransformer("paraphrase-albert-small-v2")  # ~45MB
+  # 384-dimensional embeddings
 
 def get_embedding(text: str) -> list:
     embedding = model.encode(text).tolist()
